@@ -32,9 +32,9 @@ public class Command {
             if (matcher.matches()) {
                 this.type = matcher.group(1);
                 this.params = new ArrayList<>();
-                this.params.add(matcher.group(2));
-                if (matcher.groupCount() == 3) {
-                    this.params.add(matcher.group(3));
+                int i = 2;
+                while (i <= matcher.groupCount()) {
+                    params.add(matcher.group(i++));
                 }
                 break;
             }
