@@ -4,6 +4,7 @@ public class Square extends Shape {
     private final Double side;
 
     public Square(Double side) {
+        this.type = "square";
         this.side = side;
     }
 
